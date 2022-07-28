@@ -68,3 +68,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: NWS Pull New Image
+        uses: nickorlow/nws-pull-new-image@v0.7
+        with:
+          deploy-key: "699619e1-e48b-41f0-9e88-b68896b8746c"
+          application-id: "db2308c8-e2a3-4837-8cb2-65f230aa104a"
